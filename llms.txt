@@ -56,6 +56,8 @@
 - [Couvreur à Le Vaudreuil](https://bogeyrenovation.fr/zones/le-vaudreuil/)
 - [Couvreur à Val-de-Reuil](https://bogeyrenovation.fr/zones/val-de-reuil/)
 - [Couvreur à Pont-de-l’Arche](https://bogeyrenovation.fr/zones/pont-de-larche/)
+- [Couvreur à Franqueville-Saint-Pierre](https://bogeyrenovation.fr/zones/franqueville-saint-pierre/)
+- [Couvreur à Les Andelys](https://bogeyrenovation.fr/zones/les-andelys/)
 - [Couvreur à Gaillon](https://bogeyrenovation.fr/zones/gaillon/)
 - [Couvreur à Vernon](https://bogeyrenovation.fr/zones/vernon/)
 
