@@ -1,4 +1,4 @@
-document.querySelectorAll('form.lead').forEach(function(f){
+document.querySelectorAll('form.lead, form.lead2').forEach(function(f){
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var m=f.querySelector('.msg');var d=new FormData(f);
