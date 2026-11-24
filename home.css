@@ -1,0 +1,124 @@
+/* Bogey Rénovation — accueil uniquement (body.home). Aucune règle ne touche les pages intérieures. */
+body.home{--hc-orange:#f27720;--hc-orange-d:#d9661a;--hc-navy:#0f172a}
+
+/* ---------- En-tête : bouton SMS en haut à droite ---------- */
+.home .smsbtn{display:inline-flex;align-items:center;gap:.45rem;min-height:44px;padding:0 16px;border:1.5px solid var(--hc-navy);border-radius:999px;color:var(--hc-navy);font:700 .92rem var(--fd,Manrope,system-ui,sans-serif);text-decoration:none;white-space:nowrap;background:#fff;transition:background .2s,color .2s}
+.home .smsbtn svg{width:18px;height:18px;flex:none}
+.home .smsbtn:hover,.home .smsbtn:focus-visible{background:var(--hc-navy);color:#fff}
+.home details.menu summary{min-width:44px;min-height:44px;display:grid;place-items:center}
+
+/* ---------- Barre fixe mobile : Appeler + SMS ---------- */
+.home .mbar{display:none}
+.home .devfloat{display:none!important}
+@media(max-width:959px){
+  .home .wafloat{display:none!important}
+  .home .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 -6px 20px rgba(15,23,42,.14)}
+  .home .mbar a{display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;border-radius:12px;font:700 1rem var(--fd,Manrope,system-ui,sans-serif);text-decoration:none}
+  .home .mbar svg{width:20px;height:20px;flex:none}
+  .home .mbar__call{background:var(--hc-orange);color:#fff}
+  .home .mbar__sms{background:#fff;color:var(--hc-navy);border:1.5px solid var(--hc-navy)}
+  /* le contenu ne passe jamais sous la barre */
+  body.home{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+  /* la barre s'efface pendant la saisie d'un formulaire */
+  body.home:has(input:focus,textarea:focus,select:focus) .mbar{display:none}
+  body.home:has(input:focus,textarea:focus,select:focus){padding-bottom:0}
+  html{scroll-padding-top:70px}
+}
+@media(min-width:960px){.home .smsbtn{margin-left:4px}}
+
+/* ---------- Mobile : en-tête et bandeau haut ---------- */
+@media(max-width:959px){
+  .home .smsbtn{margin-left:auto}
+  .home .topbar a{display:inline-flex;align-items:center;min-height:36px}
+  .home .bar{gap:10px}
+}
+
+/* ---------- Mobile : hero ---------- */
+@media(max-width:767px){
+  .home .hs{min-height:0;display:block}
+  .home .hs__content{padding:1.5rem 1.25rem 2rem}
+  .home .hs__grid{gap:1.75rem}
+  .home .hs__left{gap:1rem}
+  .home .hs__badge{font-size:.78rem;padding:.35rem .85rem}
+  .home .hs__title{font-size:clamp(1.75rem,8vw,2.1rem);line-height:1.12}
+  .home .hs__subtitle{font-size:1rem;line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .home .hs__ctas{display:grid}
+  .home .hs__cta-primary{min-height:52px;font-size:1.05rem;border-radius:12px;width:100%}
+  .home .hs__trust{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+  .home .hs__trust-sep{display:none}
+  .home .hs__trust-item{min-height:44px;padding:.35rem .7rem;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.07);color:#fff;font-size:.8rem;line-height:1.25}
+  .home .hs__trust-item--link{grid-column:1/-1;font-weight:700;justify-content:center;font-size:.9rem}
+  .home .hs__form-card{padding:1.25rem;border-radius:1rem}
+}
+/* champs : 16 px = pas de zoom automatique iPhone, 44 px = cible tactile */
+.home .hs__input,.home form.lead input,.home form.lead select,.home form.lead textarea{font-size:16px;min-height:46px}
+.home .hs__textarea,.home form.lead textarea{min-height:5rem}
+.home .hs__form-submit,.home form.lead .btn{min-height:52px;border-radius:12px}
+
+/* ---------- Mobile : rythme des sections ---------- */
+@media(max-width:767px){
+  .home .sv{padding:2.5rem 0 2rem}
+  .home .sv .hd{margin-bottom:1.5rem}
+  .home .sv .hd p{font-size:1rem}
+  .home .about{padding:2.5rem 0}
+  .home .about .two{gap:1.5rem;padding:0 1.25rem}
+  .home .about img{height:14rem}
+  .home .stats{padding:2rem 0}
+  .home .stats .wrap{gap:1.25rem}
+  .home .stats b{font-size:1.8rem}
+  .home .rv{padding:2.5rem 0}
+  .home .rv2{padding:2.25rem 0}
+  .home .bigstars{font-size:2rem;letter-spacing:5px;margin:.5rem 0 1rem}
+  .home .gbtn{min-height:48px}
+  .home footer.site{padding:2rem 0 1.5rem}
+  .home .fgrid{grid-template-columns:1fr 1fr;gap:1.25rem}
+  .home .fgrid>div:first-child{grid-column:1/-1}
+  .home .fgrid a{display:inline-block;padding:3px 0}
+}
+
+/* ---------- Mobile : services en carrousel ---------- */
+@media(max-width:767px){
+  .home .sv>.wrap{padding:0 1.25rem}
+  .home .sv .grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;margin:0 -1.25rem;padding:.25rem 1.25rem 1rem;scrollbar-width:none}
+  .home .sv .grid::-webkit-scrollbar{display:none}
+  .home .sv .c{flex:0 0 78%;max-width:20rem;scroll-snap-align:start;scroll-margin-left:1.25rem}
+  .home .sv .c img{height:9rem}
+  .home .sv .c .tx{padding:1.1rem 1.1rem 1.25rem}
+  .home .sv .c h3{font-size:1.1rem}
+  .home .sv .c p{font-size:.92rem;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .home .sv .c .m{margin-top:.75rem}
+}
+
+/* ---------- Mobile : avis Google en carrousel ---------- */
+@media(max-width:767px){
+  .home .gbadge{margin-bottom:1.25rem}
+  .home .rgrid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;margin:0 -1.25rem;padding:.25rem 1.25rem 1rem;scrollbar-width:none}
+  .home .rgrid::-webkit-scrollbar{display:none}
+  .home .rgrid blockquote{flex:0 0 84%;max-width:21rem;margin:0;scroll-snap-align:start;scroll-margin-left:1.25rem;background:#fff}
+  .home .rgrid p{font-size:.95rem;line-height:1.6}
+  .home .ctr{margin-top:1rem}
+  .home .ctr a{display:flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid #2563eb;border-radius:12px}
+}
+
+/* ---------- Mobile : zones, réalisations, FAQ, devis ---------- */
+@media(max-width:767px){
+  .home .wrap .s{padding:1.75rem 0}
+  .home .chips a{padding:9px 14px;min-height:40px;display:inline-flex;align-items:center}
+  .home .gallery{grid-template-columns:1fr 1fr;gap:10px}
+  .home details.faq summary{min-height:44px;display:flex;align-items:center}
+}
+
+/* ---------- Tablette ---------- */
+@media(min-width:768px) and (max-width:1023px){
+  .home .hs{min-height:0}
+  .home .hs__content{padding:3rem 2rem}
+  .home .sv .grid{grid-template-columns:1fr 1fr}
+}
+
+/* ---------- Ordinateur : finitions discrètes ---------- */
+@media(min-width:960px){
+  .home .sv .c{transition:transform .3s,box-shadow .3s}
+  .home .rgrid blockquote{background:#fff;transition:transform .3s,box-shadow .3s}
+  .home .rgrid blockquote:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.1)}
+}
+@media(prefers-reduced-motion:reduce){.home *{transition:none!important}}
