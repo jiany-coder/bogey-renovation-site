@@ -122,3 +122,6 @@ body.home{--hc-orange:#f27720;--hc-orange-d:#d9661a;--hc-navy:#0f172a}
   .home .rgrid blockquote:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.1)}
 }
 @media(prefers-reduced-motion:reduce){.home *{transition:none!important}}
+
+/* liens de texte : zone de toucher confortable */
+.home .wrap p a[href^="/realisations"],.home .wrap p a[href^="tel:"]{display:inline-block;padding:11px 2px}
