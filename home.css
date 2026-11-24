@@ -16,7 +16,7 @@ body.home{--hc-orange:#f27720;--hc-orange-d:#d9661a;--hc-navy:#0f172a}
   .home .mbar a{display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;border-radius:12px;font:700 1rem var(--fd,Manrope,system-ui,sans-serif);text-decoration:none}
   .home .mbar svg{width:20px;height:20px;flex:none}
   .home .mbar__call{background:var(--hc-orange);color:#fff}
-  .home .mbar__sms{background:#fff;color:var(--hc-navy);border:1.5px solid var(--hc-navy)}
+  .home .mbar__devis{background:#fff;color:var(--hc-navy);border:1.5px solid var(--hc-navy)}
   /* le contenu ne passe jamais sous la barre */
   body.home{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
   /* la barre s'efface pendant la saisie d'un formulaire */
