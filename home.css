@@ -208,7 +208,7 @@ html{scroll-padding-top:76px}
 .home .hc-steps .hc-s{color:#cbd5e1}
 .home .hc-steps .hc-k{color:#fdba74}
 .home .hc-steps__l{list-style:none;margin:2.5rem auto 0;padding:0;max-width:80rem;display:grid;gap:0}
-.home .hc-steps__l li{position:relative;padding:0 0 2rem 4rem;min-height:3rem}
+.home .hc-steps__l li{position:relative;padding:0 0 2rem 4rem;min-height:3rem;background:none;border:0;border-radius:0;box-shadow:none;margin:0}
 .home .hc-steps__l li:last-child{padding-bottom:0}
 .home .hc-steps__l li::before{content:"";position:absolute;left:1.3rem;top:2.9rem;bottom:.2rem;width:2px;background:rgba(255,255,255,.2)}
 .home .hc-steps__l li:last-child::before{display:none}
