@@ -265,11 +265,14 @@ html{scroll-padding-top:76px}
 .home .hc-real .s>p a[href^="/realisations"]{padding:0 1.6rem}
 
 /* ===== Curseur avant / après (mobile uniquement) ===== */
-.home .hc-ba{display:none}
+.home .hc-ba{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 1.25rem;margin:2.5rem 0 .5rem;align-items:start}
+.home .hc-ba__t{grid-column:1/-1;margin:0 0 .25rem;font:800 1.6rem/1.2 var(--fd);color:var(--n)}
+.home .hc-ba .wide{grid-column:1/-1}
+.home .hc-real .s{display:flex;flex-direction:column}.home .hc-real .s>.hc-ba{order:2}.home .hc-real .s>p{order:3;margin-top:1.25rem}
 @media(max-width:767px){
   /* Réalisations : curseurs à la place de la galerie, comme le 2e site */
   .home .hc-real .gallery{display:none}
-  .home .hc-ba{display:grid;gap:1.75rem;margin:1.75rem 0 .5rem}
+  .home .hc-ba{display:grid;grid-template-columns:1fr;gap:1.75rem;margin:1.75rem 0 .5rem}
   .home .hc-ba__t{margin:0;font:800 1.35rem/1.2 var(--fd);color:var(--n);text-align:left}
   .home .ba{position:relative;overflow:hidden;border-radius:1.1rem;aspect-ratio:var(--ar,4/3);background:#cfd6e2;box-shadow:0 8px 24px -12px rgba(15,23,42,.35);--p:50%;touch-action:pan-y}
   .home .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0;box-shadow:none}
